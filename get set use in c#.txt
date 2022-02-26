@@ -1,0 +1,36 @@
+using System;
+
+namespace getset
+{
+    class emp
+    {
+        string name;
+        int age;
+        int id;
+        string dep;
+        public void setdata(string n,int a,int i,string d)
+        {
+            this.name = n;
+            this.age = a;
+            this.id = i;
+            this.dep = d;
+        }
+        public void getdata()
+        {
+            Console.WriteLine("name {0}: age {1}: id {2}: dep {3}:",this.name,this.age,this.id,this.dep);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            emp d = new emp();
+            emp d2 = new emp();
+            d.setdata("naman", 20, 12, "java");
+            d.getdata();
+            d2.setdata("aman", 21, 15, ".net");
+            d2.getdata();
+            Console.ReadLine();
+        }
+    }
+}
